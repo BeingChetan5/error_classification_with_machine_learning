@@ -1,0 +1,14 @@
+pandas
+numpy
+scikit-learn
+gunicorn==19.9.0
+httptools
+fastapi
+uvicorn
+pydantic
+joblib
+scipy
+openpyxl
+bs4
+requests
+jira

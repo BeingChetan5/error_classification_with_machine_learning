@@ -1,0 +1,18 @@
+[unit]
+Description=Gunicorn web server  to server FastAPI applications. This FIle should be present in /etc/systemd/system/gunicorn.service
+
+After=network.target
+
+[service]
+
+User=chetan
+Group=chetan
+
+WorkingDirectory=/home/chetan/error_classification_with_machine_learning
+Environment="PATH=/home/chetan/error_classification_with_machine_learning/venv/bin"
+ExecStart=/home/chetan/error_classification_with_machine_learning/venv/bin/gunicorn --config /home/chetan/error_classification_with_machine_learning/gunicorn.py app:app
+
+ExecLoad=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
