@@ -4,7 +4,6 @@ import pandas as pd
 
 
 def connect_to_jira():
-    jira_token = "ATATT3xFfGF0OHPgKxHofZWOulKNTHoN5FoNmet_MyFV1trGsj2AQoPDLuWEHEa0dFn1jOiYICMrK4c9kC-SEnQE-GR9q3Myh8yeQ28pPbUzpGNzdHA023zWJb-Iwns_EwFBpFe7oJbwm8zeX_g5FtXuiOubTPBB6uOFiZDyoOuJzjD0VeUdFgQ=39805F57"
     options = {'server': 'https://beingcm.atlassian.net'}
     conn = JIRA(options, basic_auth=("chetanmirajkar5@gmailcom", jira_token))
     print("Jira connection established:", conn)
